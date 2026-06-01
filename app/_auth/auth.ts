@@ -11,7 +11,7 @@ const authConfig: NextAuthConfig = {
   ],
   callbacks: {
     authorized({ auth, request }) {
-      return !!auth?.user;
+      return !!auth?.user; //!! means it negates this !auth?.user (meaning if there is no user) by doing this !!auth?.user (meaning if there is user.)
     },
     async signIn({ user }) {
       try {
