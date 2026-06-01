@@ -4,6 +4,7 @@ import { Josefin_Sans } from "next/font/google";
 import Header from "./_components/Header";
 import { ReservationContextProvider } from "./_context/reservationContext/ReservationContextProvider";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next";
 type RootLayoutPropType = {
   children: React.ReactNode;
 };
@@ -42,6 +43,7 @@ const RootLayout = async ({ children }: RootLayoutPropType) => {
             },
           }}
         />
+        <Analytics />
       </body>
     </html>
   );
